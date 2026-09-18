@@ -1,0 +1,8 @@
+# RStudio / R session files
+.Rhistory
+.RData
+.Rproj.user/
+
+# Report files (not published)
+CA1_STATS2_Hong_Nhung_Nguyen.docx
+CA1_STATS2_Hong_Nhung_Nguyen.pdf
