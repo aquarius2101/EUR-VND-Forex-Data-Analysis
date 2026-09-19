@@ -62,6 +62,8 @@ The analysis focuses primarily on the Price (*M* = 26,984, *SD* = 1988.87) as th
 
 *Table 1. Results of AR and MLR models.*
 
+Both models can explain more than 99% of the variance in the data. However, MLR model achieved a much lower residual standard error than the AR, meaning the MLR model accounts for more day-to-day variance. The actual EUR/VND conversion rate on March 31, 2026 was 30,431.9 VND per Euro. AR and MLR models predicted two very close values, but it was MLR that forecasted closer to the actual data. The inaccuracies of two models once again highlight the extremely volatile nature of FX data.
+
 ### PCA Results
 
 The PCA produced six components, with the first two accounting for almost all meaningful variance in the dataset. The Matrix of Total Variance Explained (TVE) shows that PC1 explains 85.59% of the total variance and PC2 explains 14.33%, making cumulative variance 99.93%. For PC1, all price-related variables load almost identically. In contrast, PC2 sees `Change` as the main contributor, implying that the `Change` variable captures the volatility of the data independently of price.
