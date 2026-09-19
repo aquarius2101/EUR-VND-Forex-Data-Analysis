@@ -26,12 +26,13 @@ The original dataset (`EUR_VND.csv`) includes 7 attributes, 1,368 instances:
 
 2. **Descriptive Statistics**
 
-The analysis focuses primarily on the Price (_M_ = 26,984, _SD_ = 1988.87) as the target variable. Over 5 years, the equivalent worth to 1 EUR in VND reached the bottom at 22,762 VND and peaked at 31,469 VND. It fluctuated sharply from -1.96% to +2.55%.
+The analysis focuses primarily on the Price (*M* = 26,984, *SD* = 1988.87) as the target variable. Over 5 years, the equivalent worth to 1 EUR in VND reached the bottom at 22,762 VND and peaked at 31,469 VND. It fluctuated sharply from -1.96% to +2.55%.
 
-![Fig. 1. EUR/VND conversion rate from 2021 – 03/2026. Price dropped sharply from 06/2021 –
-09/2022. After that, the conversion rate tended to increase despite some setbacks.](Plots/Plot-data.png)
+![Line chart of EUR/VND exchange rate from 2021 to 2026](Plots/Plot-data.png)
+*Fig. 1. EUR/VND conversion rate from 2021 – 03/2026. Price dropped sharply from 06/2021 – 09/2022. After that, the conversion rate tended to increase despite some setbacks.*
 
-![Fig. 2. Correlation matrix of variables. The OHLC variables are greatly correlated with each other. Meanwhie, Change variable does not correlate with any and TimeIndex exhibits a strong correlation with all OHLC attributes.](Plots/Correlation-matrix.png)
+![Correlation matrix of all attributes](Plots/Correlation-matrix.png)
+*Fig. 2. Correlation matrix of variables. The OHLC variables are greatly correlated with each other. Meanwhie, Change variable does not correlate with any and TimeIndex exhibits a strong correlation with all OHLC attributes.*
 
 2. **Data Mining** (`CA1_DataMining.R`)
    - **Autoregressive (AR) Model**: A linear predictive modeling technique based on previous signal samples. Previous signals in this study are (a) previous day’s Price and (b) two days ago’s Price.
