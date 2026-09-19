@@ -29,12 +29,12 @@ The original dataset (`EUR_VND.csv`) includes 7 attributes, 1,368 instances:
 The analysis focuses primarily on the Price (*M* = 26,984, *SD* = 1988.87) as the target variable. Over 5 years, the equivalent worth to 1 EUR in VND reached the bottom at 22,762 VND and peaked at 31,469 VND. It fluctuated sharply from -1.96% to +2.55%.
 
 <div align="center">
-  <img src="Plots/Plot-data.png" alt="Line chart of EUR/VND exchange rate from 2021 to 2026" width="600">
+  <img src="Plots/Plot-data.png" alt="Line chart of EUR/VND exchange rate from 2021 to 2026" width="400">
   <p><em>Fig. 1. EUR/VND conversion rate from 2021–03/2026. Price dropped sharply from 06/2021–09/2022. After that, the conversion rate tended to increase despite some setbacks.</em></p>
 </div>
 
 <div align="center">
-  <img src="Plots/Correlation-matrix.png" alt="Correlation matrix of all attributes" width="600">
+  <img src="Plots/Correlation-matrix.png" alt="Correlation matrix of all attributes" width="400">
   <p><em>Fig. 2. Correlation matrix of variables. The OHLC variables are greatly correlated with each other. Meanwhie, Change variable does not correlate with any and TimeIndex exhibits a strong correlation with all OHLC attributes.</em></p>
 </div>
 
@@ -45,6 +45,26 @@ The analysis focuses primarily on the Price (*M* = 26,984, *SD* = 1988.87) as th
 
 3. **Results**
 
+### AR and MLR Model Results
+
+| Parameter                | AR                        | MLR                       |
+|---------------------------|---------------------------|--------------------------|
+| Residual standard error   | 129.8                     | 55.8                     |
+| Degree of Freedom         | 1,363                     | 1,359                    |
+| R²                        | 0.9957                    | 0.9992                   |
+| Adjusted R²                | 0.9957                    | 0.9992                  |
+| F-statistics               | 1.597 × 10⁵               | 2.888 × 10⁵             |
+| p-value                    | < 2.2 × 10⁻¹⁶              | < 2.2 × 10⁻¹⁶          |
+| MAE                         | 97.7768                   | 42.15565               |
+| MSE                         | 16,800.91                 | 3,097.243              |
+| RMSE                        | 129.6183                  | 55.65288               |
+| 2026/03/31 forecast         | 30,263.8 VND               | 30,297.6 VND          |
+
+*Table 1. Results of AR and MLR models.*
+
+### PCA Results
+
+The PCA produced six components, with the first two accounting for almost all meaningful variance in the dataset. The Matrix of Total Variance Explained (TVE) shows that PC1 explains 85.59% of the total variance and PC2 explains 14.33%, making cumulative variance 99.93%. For PC1, all price-related variables load almost identically. In contrast, PC2 sees `Change` as the main contributor, implying that the `Change` variable captures the volatility of the data independently of price.
 
 ## Requirements
 
